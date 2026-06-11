@@ -3,48 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orçamentos Local</title>
+  <title>Orçamentos Local — Gestão de Orçamentos Profissional e Offline</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Orçamentos Local - Crie, organize e exporte orçamentos profissionais em segundos. Um software leve, seguro e 100% offline para Windows e Android." />
+  <meta name="keywords" content="orçamentos, gestão de orçamentos, gerar pdf, offline, windows, android, criar orçamento" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Orçamentos Local — Gestão de Orçamentos Profissional" />
+  <meta property="og:description" content="Crie, organize e exporte orçamentos em segundos. Leve, seguro e 100% offline para Windows e Android." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/username/project/main/preview.png" /> <!-- Placeholder for actual preview image -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
   <div class="container">
 
     <header>
-      <div class="logo-mark">OL</div>
+      <div class="logo">
+        <span class="logo-icon">📊</span>
+        <span class="logo-text">Orçamentos Local</span>
+      </div>
     </header>
 
     <main>
-      <h1>Orçamentos Local</h1>
-      <h2>Software para criação e gestão de orçamentos.<br>Escolha sua versão e faça o download.</h2>
+      
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Criação e gestão de orçamentos simplificada.</h1>
+          <p class="subtitle">Uma ferramenta rápida, moderna e 100% offline para organizar seus serviços, cadastrar clientes e exportar orçamentos profissionais direto do seu dispositivo.</p>
+          
+          <div class="buttons">
+            <a class="btn btn-windows" href="https://drive.google.com/drive/folders/1gRQSOIG7Rkxvti3DklFNzjTR8FhxQzdj?usp=drive_link" target="_blank" rel="noopener" id="btn-windows">
+              <svg class="btn-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.1zM10.8 1.95L24 0v11.55H10.8V1.95zM10.8 12.45H24v11.55l-13.2-1.95v-9.6z"/>
+              </svg>
+              <span class="btn-text">
+                <span class="btn-label">Baixar para Windows</span>
+                <span class="btn-sub">Abre no Google Drive</span>
+              </span>
+            </a>
 
+            <a class="btn btn-android" href="https://drive.google.com/drive/folders/1ZdwQRkuTWuwqeoj8a6K441aAKIlNO_kb?usp=drive_link" target="_blank" rel="noopener" id="btn-android">
+              <svg class="btn-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M17.523 15.3l1.816 3.146a.5.5 0 1 1-.866.5l-1.838-3.185a10.05 10.05 0 0 1-9.27 0l-1.838 3.185a.5.5 0 0 1-.866-.5L6.477 15.3C3.666 13.565 1.75 10.51 1.75 7h20.5c0 3.51-1.916 6.565-4.727 8.3zm-11.023-5.8a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm11 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM12 .75a9.25 9.25 0 0 0-9.25 9.25h18.5A9.25 9.25 0 0 0 12 .75z"/>
+              </svg>
+              <span class="btn-text">
+                <span class="btn-label">Baixar para Android</span>
+                <span class="btn-sub">Abre no Google Drive</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Web Mockup -->
+        <div class="hero-mockup">
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <div class="dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="mockup-url">orcamentos_local.exe</div>
+            </div>
+            <div class="mockup-content">
+              <div class="mock-sidebar">
+                <div class="mock-nav-item active"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+              </div>
+              <div class="mock-main">
+                <div class="mock-title-bar">
+                  <div>
+                    <span class="mock-tag">Novo Orçamento</span>
+                    <span class="mock-desc">Cliente: João Silva</span>
+                  </div>
+                  <span class="mock-date">11 Jun 2026</span>
+                </div>
+                <div class="mock-table">
+                  <div class="mock-row header">
+                    <span>Descrição do Item</span>
+                    <span>Qtd</span>
+                    <span>Total</span>
+                  </div>
+                  <div class="mock-row">
+                    <span>Mão de Obra Especializada</span>
+                    <span>1</span>
+                    <span>R$ 1.500,00</span>
+                  </div>
+                  <div class="mock-row">
+                    <span>Materiais Elétricos & Cabos</span>
+                    <span>15</span>
+                    <span>R$ 150,00</span>
+                  </div>
+                </div>
+                <div class="mock-total">
+                  <span>Subtotal Geral:</span>
+                  <span class="total-val">R$ 1.650,00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Divider -->
       <div class="divider"></div>
 
-      <div class="buttons">
+      <!-- Features Section -->
+      <section class="features">
+        <h2>Por que usar o Orçamentos Local?</h2>
+        <div class="features-grid">
+          
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Rapidez Imbatível</h3>
+            <p>Crie e organize orçamentos de serviços em segundos com um fluxo de trabalho otimizado.</p>
+          </div>
 
-        <a class="btn" href="https://drive.google.com/drive/folders/1gRQSOIG7Rkxvti3DklFNzjTR8FhxQzdj?usp=drive_link" target="_blank" rel="noopener" id="btn-windows">
-          <span class="btn-icon">⊞</span>
-          <span class="btn-text">
-            <span class="btn-label">Versão Windows</span>
-            <span class="btn-sub">Abre no Google Drive</span>
-          </span>
-        </a>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Totalmente Local</h3>
+            <p>Seus dados pertencem a você. Tudo é salvo localmente no seu dispositivo de forma segura.</p>
+          </div>
 
-        <a class="btn" href="https://drive.google.com/drive/folders/1ZdwQRkuTWuwqeoj8a6K441aAKIlNO_kb?usp=drive_link" target="_blank" rel="noopener" id="btn-android">
-          <span class="btn-icon">☰</span>
-          <span class="btn-text">
-            <span class="btn-label">Versão Android</span>
-            <span class="btn-sub">Abre no Google Drive</span>
-          </span>
-        </a>
+          <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <h3>100% Offline</h3>
+            <p>Não depende de conexão com a internet para criar, editar ou visualizar seus orçamentos.</p>
+          </div>
 
-      </div>
+          <div class="feature-card">
+            <div class="feature-icon">📄</div>
+            <h3>Exportação Facilitada</h3>
+            <p>Gere e compartilhe orçamentos profissionais em formato limpo pronto para seus clientes.</p>
+          </div>
 
-      <p class="note" id="download-note"></p>
+        </div>
+      </section>
+
     </main>
 
     <footer>
-      <span>v1.0 &mdash; Orçamentos Local</span>
+      <span>v1.1 &mdash; Orçamentos Local &bull; Todos os direitos reservados.</span>
     </footer>
 
   </div>
