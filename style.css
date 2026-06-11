@@ -1,0 +1,212 @@
+/* ===========================
+   Orçamentos Local — style.css
+   Tema: Vermelho & Preto
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:         #080808;
+  --bg-card:    #0f0f0f;
+  --border:     #2a0a0a;
+  --red:        #cc1a1a;
+  --red-dim:    #7a1010;
+  --red-glow:   rgba(204, 26, 26, 0.08);
+  --text:       #c9b8b8;
+  --text-muted: #553333;
+  --white:      #f0e0e0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Share Tech Mono', monospace;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.01) 2px,
+      rgba(255,255,255,0.01) 4px
+    );
+}
+
+/* ── Layout ── */
+.container {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header / Logo ── */
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.logo-mark {
+  font-family: 'IM Fell English', serif;
+  font-size: 1rem;
+  letter-spacing: 0.35em;
+  color: var(--red-dim);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1.1rem;
+  text-transform: uppercase;
+}
+
+/* ── Main Content ── */
+main {
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+h1 {
+  font-family: 'IM Fell English', serif;
+  font-size: 2.4rem;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── Divider ── */
+.divider {
+  width: 60px;
+  height: 1px;
+  background: var(--red-dim);
+  margin: 0.25rem auto;
+  opacity: 0.7;
+}
+
+/* ── Buttons ── */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 1.4rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  text-align: left;
+}
+
+.btn:hover {
+  border-color: var(--red);
+  background: var(--red-glow);
+  color: var(--white);
+}
+
+.btn:active {
+  background: rgba(204, 26, 26, 0.15);
+}
+
+.btn-icon {
+  font-size: 1.5rem;
+  color: var(--red-dim);
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.btn:hover .btn-icon {
+  color: var(--red);
+}
+
+.btn-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.btn-label {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.05rem;
+  color: inherit;
+  letter-spacing: 0.03em;
+}
+
+.btn-sub {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+/* ── Note ── */
+.note {
+  font-size: 0.7rem;
+  color: var(--red-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  min-height: 1em;
+  transition: opacity 0.4s;
+}
+
+/* ── Footer ── */
+footer {
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--bg-card);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  main {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 0.75rem;
+  }
+}
