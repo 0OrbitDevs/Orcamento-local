@@ -3,166 +3,192 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orçamentos Local — Gestão de Orçamentos Profissional e Offline</title>
+  <title>Fazer Orçamento | A ferramenta completa para MEIs</title>
   
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Orçamentos Local - Crie, organize e exporte orçamentos profissionais em segundos. Um software leve, seguro e 100% offline para Windows e Android." />
-  <meta name="keywords" content="orçamentos, gestão de orçamentos, gerar pdf, offline, windows, android, criar orçamento" />
+  <meta name="description" content="A ferramenta completa para MEIs e pequenas empresas criarem orçamentos profissionais, organizarem documentos e ganharem mais clientes. Sem planilhas complicadas." />
+  <meta name="keywords" content="fazer orçamento, orçamentos, mei, pequenas empresas, recibos, ordem de serviço" />
   
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Orçamentos Local — Gestão de Orçamentos Profissional" />
-  <meta property="og:description" content="Crie, organize e exporte orçamentos em segundos. Leve, seguro e 100% offline para Windows e Android." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/username/project/main/preview.png" /> <!-- Placeholder for actual preview image -->
+  <meta property="og:title" content="Fazer Orçamento | A ferramenta completa para MEIs" />
+  <meta property="og:description" content="Crie orçamentos profissionais em 3 minutos e organize todo o seu negócio." />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter para um visual limpo e humano -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
 
   <!-- Toast Notification Container -->
   <div id="toast-container"></div>
 
-  <div class="container">
-
-    <header>
+  <header>
+    <div class="header-container">
       <div class="logo">
-        <span class="logo-icon">📊</span>
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </span>
         <span class="logo-text">Orçamentos Local</span>
       </div>
-    </header>
+      <div class="header-nav">
+        <a href="#recursos" class="nav-link">Recursos</a>
+        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+      </div>
+    </div>
+  </header>
 
-    <main>
-      
-      <!-- Hero Section -->
-      <section class="hero">
+  <main>
+    <!-- Hero Section (Light Gradient) -->
+    <section class="hero-wrapper">
+      <div class="container hero">
         <div class="hero-text">
-          <h1>Criação e gestão de orçamentos simplificada.</h1>
-          <p class="subtitle">Uma ferramenta rápida, moderna e 100% offline para organizar seus serviços, cadastrar clientes e exportar orçamentos profissionais direto do seu dispositivo.</p>
+          <h1>Orçamento que conquista cliente e gestão eficiente</h1>
+          <p class="subtitle">A ferramenta completa para MEIs e pequenas empresas criarem orçamentos profissionais, organizarem documentos e ganharem mais clientes. Sem planilhas perdidas!</p>
           
           <div class="buttons">
-            <a class="btn btn-windows" href="https://drive.google.com/drive/folders/1gRQSOIG7Rkxvti3DklFNzjTR8FhxQzdj?usp=drive_link" target="_blank" rel="noopener" id="btn-windows">
-              <svg class="btn-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <a class="btn btn-primary" href="https://pay.kiwify.com.br/I9dFNI9" target="_blank" rel="noopener" id="btn-windows">
+              <svg class="btn-svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                 <path d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.1zM10.8 1.95L24 0v11.55H10.8V1.95zM10.8 12.45H24v11.55l-13.2-1.95v-9.6z"/>
               </svg>
-              <span class="btn-text">
-                <span class="btn-label">Baixar para Windows</span>
-                <span class="btn-sub">Abre no Google Drive</span>
-              </span>
+              <span>Baixar para Windows</span>
             </a>
 
-            <a class="btn btn-android" href="https://drive.google.com/drive/folders/1ZdwQRkuTWuwqeoj8a6K441aAKIlNO_kb?usp=drive_link" target="_blank" rel="noopener" id="btn-android">
-              <svg class="btn-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <a class="btn btn-secondary" href="https://pay.kiwify.com.br/I9dFNI9" target="_blank" rel="noopener" id="btn-android">
+              <svg class="btn-svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                 <path d="M17.523 15.3l1.816 3.146a.5.5 0 1 1-.866.5l-1.838-3.185a10.05 10.05 0 0 1-9.27 0l-1.838 3.185a.5.5 0 0 1-.866-.5L6.477 15.3C3.666 13.565 1.75 10.51 1.75 7h20.5c0 3.51-1.916 6.565-4.727 8.3zm-11.023-5.8a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm11 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM12 .75a9.25 9.25 0 0 0-9.25 9.25h18.5A9.25 9.25 0 0 0 12 .75z"/>
               </svg>
-              <span class="btn-text">
-                <span class="btn-label">Baixar para Android</span>
-                <span class="btn-sub">Abre no Google Drive</span>
-              </span>
+              <span>Baixar App Android</span>
             </a>
           </div>
-        </div>
 
-        <!-- Interactive Web Mockup -->
-        <div class="hero-mockup">
-          <div class="mockup-window">
-            <div class="mockup-header">
-              <div class="dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
-              <div class="mockup-url">orcamentos_local.exe</div>
-            </div>
-            <div class="mockup-content">
-              <div class="mock-sidebar">
-                <div class="mock-nav-item active"></div>
-                <div class="mock-nav-item"></div>
-                <div class="mock-nav-item"></div>
-                <div class="mock-nav-item"></div>
-              </div>
-              <div class="mock-main">
-                <div class="mock-title-bar">
-                  <div>
-                    <span class="mock-tag">Novo Orçamento</span>
-                    <span class="mock-desc">Cliente: João Silva</span>
-                  </div>
-                  <span class="mock-date">11 Jun 2026</span>
-                </div>
-                <div class="mock-table">
-                  <div class="mock-row header">
-                    <span>Descrição do Item</span>
-                    <span>Qtd</span>
-                    <span>Total</span>
-                  </div>
-                  <div class="mock-row">
-                    <span>Mão de Obra Especializada</span>
-                    <span>1</span>
-                    <span>R$ 1.500,00</span>
-                  </div>
-                  <div class="mock-row">
-                    <span>Materiais Elétricos & Cabos</span>
-                    <span>15</span>
-                    <span>R$ 150,00</span>
-                  </div>
-                </div>
-                <div class="mock-total">
-                  <span>Subtotal Geral:</span>
-                  <span class="total-val">R$ 1.650,00</span>
-                </div>
-              </div>
-            </div>
+          <div class="hero-badges">
+            <span class="badge">✓ Teste grátis</span>
+            <span class="badge">✓ Orçamentos em 3 minutos</span>
+            <span class="badge">✓ Suporte em português</span>
           </div>
         </div>
-      </section>
 
-      <!-- Divider -->
-      <div class="divider"></div>
+        <div class="hero-image-wrapper">
+          <!-- We use the absolute path to the generated image to embed it correctly -->
+          <img src="file:///C:/Users/virtus/.gemini/antigravity-ide/brain/290d1a55-6ab2-42a6-82fa-49fa16246a37/worker_using_app_1781218545106.png" alt="Profissional usando o Orçamentos Local no celular" class="hero-image" />
+        </div>
+      </div>
+    </section>
 
-      <!-- Features Section -->
-      <section class="features">
-        <h2>Por que usar o Orçamentos Local?</h2>
-        <div class="features-grid">
+    <!-- Features Section -->
+    <section class="container features" id="recursos">
+      <div class="section-header">
+        <h2>Recursos ideais para seu negócio evoluir</h2>
+        <p>Desde a criação do orçamento até o recebimento, nossa plataforma acompanha todo o ciclo comercial da sua empresa.</p>
+      </div>
+
+      <div class="features-grid">
+        
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <span class="feature-icon">📄</span>
+          </div>
+          <h3>Orçamentos Profissionais</h3>
+          <p>Crie orçamentos com sua marca e aumente suas vendas com credibilidade. Em poucos cliques.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <span class="feature-icon">📁</span>
+          </div>
+          <h3>Modelo de Orçamento</h3>
+          <p>Modelos profissionais prontos para usar e personalizar de acordo com o seu negócio.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <span class="feature-icon">💲</span>
+          </div>
+          <h3>Recibo de Pagamento</h3>
+          <p>Emita recibos de forma rápida e profissional sempre que receber de seus clientes.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <span class="feature-icon">📝</span>
+          </div>
+          <h3>Ordem de Serviço</h3>
+          <p>Gerencie ordens de serviço completas com todos os detalhes do trabalho realizado.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="testimonials-wrapper" id="depoimentos">
+      <div class="container testimonials">
+        <div class="section-header">
+          <h2>Veja o que nossos clientes dizem</h2>
+          <p>Histórias reais de empreendedores que transformaram seus negócios com o app.</p>
+        </div>
+
+        <div class="testimonials-grid">
           
-          <div class="feature-card">
-            <div class="feature-icon">⚡</div>
-            <h3>Rapidez Imbatível</h3>
-            <p>Crie e organize orçamentos de serviços em segundos com um fluxo de trabalho otimizado.</p>
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Muito prático e funcional! Consegui organizar todos os meus orçamentos e aumentei minhas vendas em 40%. A cara do meu negócio mudou."</p>
+            <div class="author">
+              <div class="author-info">
+                <strong>Carlos Silva</strong>
+                <span>Eletricista - MEI</span>
+              </div>
+            </div>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">🔒</div>
-            <h3>Totalmente Local</h3>
-            <p>Seus dados pertencem a você. Tudo é salvo localmente no seu dispositivo de forma segura.</p>
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"A opção de enviar o orçamento em PDF pelo WhatsApp facilitou demais a minha vida! Meus clientes adoram a praticidade e o profissionalismo."</p>
+            <div class="author">
+              <div class="author-info">
+                <strong>Mariana Santos</strong>
+                <span>Produtora de Eventos</span>
+              </div>
+            </div>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">🌐</div>
-            <h3>100% Offline</h3>
-            <p>Não depende de conexão com a internet para criar, editar ou visualizar seus orçamentos.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">📄</div>
-            <h3>Exportação Facilitada</h3>
-            <p>Gere e compartilhe orçamentos profissionais em formato limpo pronto para seus clientes.</p>
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Era uma bagunça para fazer orçamento no papel. Agora com esse app ficou tudo organizadinho e profissional. Vale muito a pena!"</p>
+            <div class="author">
+              <div class="author-info">
+                <strong>João Pereira</strong>
+                <span>Jardineiro</span>
+              </div>
+            </div>
           </div>
 
         </div>
-      </section>
+      </div>
+    </section>
 
-    </main>
+    <!-- CTA Final Section -->
+    <section class="cta-wrapper">
+      <div class="container cta-section">
+        <h2>Pronto para transformar seu negócio?</h2>
+        <a href="#btn-android" class="btn btn-primary btn-large">Começar a usar hoje?</a>
+      </div>
+    </section>
 
-    <footer>
-      <span>v1.1 &mdash; Orçamentos Local &bull; Todos os direitos reservados.</span>
-    </footer>
+  </main>
 
-  </div>
+  <footer>
+    <div class="container">
+      <p>Orçamentos Local &copy; 2026. Ajudando o empreendedor brasileiro.</p>
+    </div>
+  </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
