@@ -11,7 +11,7 @@ function showToast(message) {
   
   // Adicionar ícone de check e mensagem
   toast.innerHTML = `
-    <span style="color: #059669; font-weight: bold;">✓</span>
+    <span style="color: #dc2626; font-weight: bold;">✓</span>
     <span>${message}</span>
   `;
   

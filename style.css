@@ -13,15 +13,15 @@
   /* Cores Principais */
   --bg-white: #ffffff;
   --bg-gray: #f9fafb;
-  --bg-hero-dark: #064e3b; /* Fundo do header / Topo escuro */
-  --bg-hero-light: #ecfdf5; /* Gradiente amigável verde muito claro */
+  --bg-hero-dark: #7f1d1d; /* Fundo do header / Topo escuro */
+  --bg-hero-light: #fef2f2; /* Gradiente vermelho muito claro */
   
   --text-dark: #111827;
   --text-muted: #4b5563;
   --text-light: #f3f4f6;
 
-  --primary: #059669;      /* Verde esmeralda forte */
-  --primary-hover: #047857;
+  --primary: #dc2626;      /* Vermelho principal do app */
+  --primary-hover: #b91c1c;
   --secondary: #1f2937;    /* Botão secundário escuro */
   --secondary-hover: #111827;
   
@@ -85,7 +85,7 @@ header {
 }
 
 .logo-icon {
-  color: var(--primary); /* Se quiser deixar verde no fundo escuro, ou branco */
+  color: var(--primary);
   background: white;
   border-radius: 4px;
   padding: 4px;
@@ -141,15 +141,18 @@ header {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: minmax(0, 760px);
+  justify-content: center;
+  gap: 2rem;
   align-items: center;
+  text-align: center;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
 }
 
 h1 {
@@ -227,21 +230,6 @@ h1 {
 }
 
 /* ── Imagem do Hero ── */
-.hero-image-wrapper {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  transform: rotate(2deg);
-  border: 8px solid white;
-}
-
-.hero-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* ── Section Headers ── */
 .section-header {
   text-align: center;
@@ -287,11 +275,11 @@ h1 {
 .feature-card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
-  border-color: rgba(5, 150, 105, 0.2);
+  border-color: rgba(220, 38, 38, 0.2);
 }
 
 .feature-icon-wrapper {
-  background: #ecfdf5;
+  background: #fee2e2;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -449,13 +437,6 @@ footer {
   h1 {
     font-size: 2.5rem;
   }
-  
-  .hero-image-wrapper {
-    transform: rotate(0deg);
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
   .hero-badges {
     justify-content: center;
   }
